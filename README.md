@@ -1,6 +1,6 @@
 # graph-cross-correction-sim
 
-## Week 1 state
+## Day 1 state
 
 This is the first rough computational translation of the project idea.
 
@@ -21,3 +21,4 @@ At this stage the priority is not elegance. The priority is converting a biologi
 - geometry and dynamics are mixed together in one function
 - rescue uses an instantaneous threshold without justification
 - corrected nuclei are always placed at the start of the fibre
+
