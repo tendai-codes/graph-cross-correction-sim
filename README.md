@@ -82,6 +82,26 @@ This creates a clear bridge between the MSc thesis observation and the computati
 - Rescue is triggered by a fixed signal threshold.
 - The current model is a proof of concept, not a calibrated biological simulation.
 
+### Part 3 — Geometry-based spatial graph
+
+The third model keeps the Laplacian diffusion update from Part 2 but changes how the graph is built.
+
+Instead of using a fixed line graph, nuclear positions are generated first. Edges are then created between nuclei that are close enough to interact.
+
+The modelling chain becomes:
+
+```text
+nuclear positions → adjacency matrix → Laplacian → diffusion simulation → rescue outcome
+```
+
+This part introduces the idea that nuclear spacing and local connectivity may influence cross-correction behaviour.
+
+Key outcome:
+
+- the graph is now based on spatial proximity
+- irregular nuclear spacing can affect signal reach
+- the same Laplacian framework can operate on more realistic geometry
+
 ## Setup
 
 Install dependencies:
@@ -116,4 +136,6 @@ Planned refinements:
 
 ## Reference
 
-Masuda, N., Porter, M. A., & Lambiotte, R. (2017). *Random walks and diffusion on networks*. Physics Reports.
+Masuda, N., Porter, M. A., & Lambiotte, R. (2017). Random walks and diffusion on networks. *Physics Reports*, 716-717, 1-58. https://doi.org/10.1016/j.physrep.2017.07.007
+
+Bruusgaard, J. C., Liestøl, K., Ekmark, M., Kollstad, K., & Gundersen, K. (2003). Number and spatial distribution of nuclei in the muscle fibres of normal mice studied in vivo. *The Journal of Physiology*, 551(2), 467-478. https://doi.org/10.1113/jphysiol.2003.045328
