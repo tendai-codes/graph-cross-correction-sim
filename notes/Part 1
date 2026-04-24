@@ -1,0 +1,19 @@
+# Part 1 Notes — Naive Line Simulation
+
+## 1. Process
+
+- Established the baseline model by representing nuclei as a 1-D line and testing whether local neighbour-based signal spread could produce rescue.
+- Introduced corrected nuclei as fixed signal sources and used a rescue threshold to convert continuous signal into a binary biological outcome.
+- Produced the first visual evidence that signal spreads from corrected nuclei but weakens rapidly with distance.
+
+## 2. Key issues with model
+
+- The neighbour-averaging rule is heuristic and not yet derived from a formal diffusion equation.
+- Nuclei are evenly spaced in a straight line, which oversimplifies muscle fibre geometry.
+- Rescue is based on instantaneous signal crossing a threshold, rather than sustained exposure over time.
+
+## 3. Thoughts for next step forward
+
+- Replace manual neighbour averaging with a graph Laplacian diffusion operator.
+- Represent nuclei as nodes in a graph so transport can be described through adjacency structure.
+- Use the next part to make the transport rule mathematically explicit rather than purely intuitive.

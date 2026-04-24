@@ -1,0 +1,19 @@
+# Part 2 Notes — Graph Laplacian Diffusion Model
+
+## 1. Changes/improvements from previous part
+
+- Replaced the naive neighbour-averaging rule with graph Laplacian diffusion using `L = D - A`.
+- Made signal transport mathematically explicit by modelling propagation as diffusion over a discrete network.
+- Preserved the biological logic from Part 1: corrected nuclei remain source nodes and rescue still depends on signal threshold crossing.
+
+## 2. Key issues with model
+
+- The graph is still based on a regular line structure, so nuclear spacing remains artificial.
+- All connected neighbours are treated uniformly, even though biological transport should depend on spatial distance.
+- The model improves transport mathematics but still lacks realistic geometry.
+
+## 3. Thoughts for next step forward
+
+- Move from a fixed line graph to a geometry-derived spatial graph.
+- Generate nuclear positions and define edges based on distance or interaction radius.
+- Use the next part to test whether irregular nuclear spacing changes signal propagation and rescue outcomes.

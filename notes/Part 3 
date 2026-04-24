@@ -1,0 +1,19 @@
+# Part 3 Notes — Geometry-Based Spatial Graph
+
+## 1. Changes/improvements from previous part
+
+- Replaced the fixed line graph with spatially generated nuclear positions.
+- Constructed adjacency from geometry, allowing transport structure to emerge from distance relationships.
+- Improved biological realism by allowing irregular spacing between nuclei.
+
+## 2. Key issues with model
+
+- Geometry is still simplified, since nuclei are modelled in one dimension rather than in a full muscle fibre structure.
+- Transport strength is still globally controlled and does not yet fully reflect distance-weighted biological exchange.
+- Signal production and rescue thresholds remain deterministic and uniform across nuclei.
+
+## 3. Thoughts for next step forward
+
+- Introduce parameter sweeps to test how rescue changes under different transport strengths, thresholds, and corrected fractions.
+- Compare clustered and distributed correction patterns.
+- Use the next part to shift from building the model structure to analysing model behaviour systematically.
