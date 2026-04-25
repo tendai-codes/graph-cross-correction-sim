@@ -18,6 +18,23 @@ The project is organised as staged parts rather than calendar weeks. Each part r
 |---|---|---|
 | Part 1 | `Part1.ipynb` | Build the first naive line simulation using manual neighbour averaging. |
 | Part 2 | `Part2.ipynb` | Replace heuristic neighbour averaging with graph Laplacian diffusion. |
+| Part 3 | `Part3.ipynb` | Introduce geometry-based spatial graphs where nuclear connectivity depends on distance. |
+| Part 4 | `Part4.ipynb` | Run parameter sensitivity experiments to test how transport, decay, and correction patterns affect rescue. |
+
+## Conceptual modelling path
+
+The project follows this reasoning chain:
+
+```text
+MSc thesis observation
+→ local cross-correction appears spatial
+→ corrected nuclei can be treated as signal sources
+→ signal transport can be approximated as diffusion
+→ nuclei can be represented as graph nodes
+→ rescue can be modelled as a threshold outcome
+```
+
+# Parts completed
 
 ## Part 1 — Naive line simulation
 
@@ -101,6 +118,25 @@ Key outcome:
 - the graph is now based on spatial proximity
 - irregular nuclear spacing can affect signal reach
 - the same Laplacian framework can operate on more realistic geometry
+
+### Part 4 — Parameter sensitivity experiments
+
+The fourth model keeps the geometry-based graph from Part 3 and uses it to explore how rescue behaviour changes under different parameter assumptions.
+
+The parameters explored are:
+
+- diffusion strength
+- signal decay rate
+- corrected nuclei fraction
+- rescue threshold
+
+This part shifts the project from building the simulation structure to interrogating model behaviour.
+
+Key outcome:
+
+- rescue is controlled by both transport and activation assumptions
+- decay and threshold can prevent rescue even when signal spreads spatially
+- corrected nuclei placement may affect rescue efficiency because diffusion is local
 
 ## Setup
 
