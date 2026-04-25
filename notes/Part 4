@@ -1,0 +1,20 @@
+# Part 4 Notes — Parameter Sensitivity Experiments
+
+## 1. Changes or improvements from previous part
+
+- Reused the geometry-based graph from Part 3 and added systematic parameter sweeps.
+- Tested how rescue changes under different diffusion strengths, decay rates, corrected fractions, and rescue thresholds.
+- Shifted the project from model construction toward hypothesis testing and sensitivity analysis.
+
+## 2. Key issues with model
+
+- Rescue still depends on an instantaneous threshold rather than sustained biological exposure.
+- Parameter values remain exploratory and are not fitted to experimental measurements.
+- The geometry is still simplified, so conclusions should be interpreted as mechanism-testing rather than biological prediction.
+
+## 3. Thoughts for next step forward
+
+- Introduce cumulative exposure so rescue depends on signal integrated over time.
+- Compare instantaneous rescue against exposure-based rescue to see how the biological interpretation changes.
+- Use the next part to make the rescue rule more biologically plausible while keeping the deterministic model interpretable.
+
