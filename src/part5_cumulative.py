@@ -7,7 +7,7 @@ import numpy as np
 
 from .part2_laplacian import diffusion_step, graph_laplacian
 from .part3_geometry import build_radius_adjacency, corrected_pattern
-from .part4_sweeps import simulate_instantaneous_rescue
+from .part4_parameter_sensitivity import simulate_instantaneous_rescue
 
 
 def cumulative_rescue(exposure: np.ndarray, exposure_threshold: float) -> np.ndarray:
