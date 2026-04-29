@@ -1,9 +1,8 @@
 import numpy as np
 
 from src.part3_geometry import generate_positions
-from src.part4_sweeps import instantaneous_rescue
+from src.part4_parameter_sensitivity import instantaneous_rescue
 from src.part5_cumulative import simulate_cumulative_exposure
-
 
 def test_instantaneous_threshold_is_monotonic():
     signal = np.array([0.1, 0.3, 0.7, 1.2])
