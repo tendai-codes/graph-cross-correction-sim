@@ -20,6 +20,7 @@ The project is organised as staged parts rather than calendar weeks. Each part r
 | Part 2 | `Part2.ipynb` | Replace heuristic neighbour averaging with graph Laplacian diffusion. |
 | Part 3 | `Part3.ipynb` | Introduce geometry-based spatial graphs where nuclear connectivity depends on distance. |
 | Part 4 | `Part4.ipynb` | Run parameter sensitivity experiments to test how transport, decay, and correction patterns affect rescue. |
+| Part 5 | `Part5.ipynb` | Replace instantaneous rescue thresholds with cumulative exposure dynamics to model time-integrated signal accumulation and delayed rescue effects. |
 
 ## Conceptual modelling path
 
@@ -112,6 +113,12 @@ nuclear positions → adjacency matrix → Laplacian → diffusion simulation �
 ```
 
 This part introduces the idea that nuclear spacing and local connectivity may influence cross-correction behaviour.
+
+## Geometry-based diffusion animation
+
+The animation below shows signal spreading across a spatial graph of nuclei. Corrected nuclei act as signal sources, while neighbouring nuclei receive signal through graph-based diffusion.
+
+This demonstrates that rescue depends not only on the number of corrected nuclei, but also on where they are placed in the spatial network.
 
 Key outcome:
 
