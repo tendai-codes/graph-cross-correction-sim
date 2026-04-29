@@ -1,0 +1,19 @@
+# Part 5 Notes — Cumulative Exposure Rescue Model
+
+## 1. Changes or improvements from previous part
+
+- Replaced instantaneous rescue with cumulative exposure, allowing sustained sub-threshold signal to contribute to rescue.
+- Added an exposure state variable while keeping the graph Laplacian transport model from earlier parts.
+- Linked the simulation more directly to biological processes that unfold over time rather than single-step threshold crossing.
+
+## 2. Key issues with model
+
+- Exposure threshold is still assumed rather than fitted to experimental data.
+- Signal production and decay remain uniform across nuclei.
+- The model remains deterministic and does not yet capture biological noise or variability in correction efficiency.
+
+## 3. Thoughts for next step forward
+
+- Compare rescue outcomes across correction patterns, exposure thresholds, and nuclear densities.
+- Introduce simple calibration or parameter fitting if experimental measurements are available.
+- Consider stochastic extensions only after the deterministic baseline is well understood.
