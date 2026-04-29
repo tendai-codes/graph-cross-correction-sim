@@ -138,6 +138,18 @@ Key outcome:
 - decay and threshold can prevent rescue even when signal spreads spatially
 - corrected nuclei placement may affect rescue efficiency because diffusion is local
 
+### Part 5 — Cumulative exposure rescue model
+
+Part 5 improves the biological interpretation of rescue by replacing the instantaneous signal threshold with a cumulative exposure threshold. Instead of asking whether a nucleus crosses a signal threshold at one timestep, this part asks whether sustained exposure to local signal is sufficient to produce rescue.
+
+This keeps the geometry-based graph Laplacian diffusion model from Part 3 and the sensitivity-testing mindset from Part 4, but adds an exposure state variable:
+
+$$
+e_{t+1} = e_t + u_t dt
+$$
+
+A nucleus is marked as rescued when cumulative exposure exceeds a defined threshold. This makes the model better suited to exploring whether weak but persistent cross-correction signals could still produce biologically meaningful rescue.
+
 ## Setup
 
 Install dependencies:
@@ -159,16 +171,6 @@ The current project uses:
 - `numpy`
 - `matplotlib`
 - `jupyter`
-
-## Next modelling steps
-
-Planned refinements:
-
-- introduce geometry-based graph construction
-- support non-uniform nuclear spacing
-- test different corrected-nuclei placement strategies
-- run parameter sensitivity experiments
-- replace instantaneous rescue with cumulative exposure-based rescue
 
 ## Reference
 
