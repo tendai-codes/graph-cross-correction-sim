@@ -56,22 +56,25 @@ Part 2 keeps the same biological idea but changes the transport mechanism.
 
 Instead of manually mixing left and right neighbours, nuclei are represented as nodes in a graph. Connectivity is stored in an adjacency matrix `A`, and signal transport is modelled using the graph Laplacian:
 
-```text
-L = D − A
-```
+$$
+L = D - A
+$$
+
 
 The signal update is:
 
-```text
-u(t + 1) = u(t) + dt[-αLu(t) − βu(t) + q]
-```
+$$
+u_{t+1} = u_t + dt\left[-\alpha L u_t - \beta u_t + q\right]
+$$
 
 where:
 
-- `u(t)` is the signal vector
-- `−αLu(t)` models diffusion across connected nuclei
-- `−βu(t)` models signal decay
-- `q` represents continuous production from corrected nuclei
+- $u_t$ is the signal vector at timestep $t$
+- $-\alpha L u_t$ spreads signal across connected nuclei through graph diffusion
+- $-\beta u_t$ models explicit signal decay over time
+- $q$ adds continuous signal production from corrected nuclei
+- $dt$ controls the size of each numerical update step
+
 
 This replaces the heuristic neighbour-averaging rule from Part 1 with a standard diffusion-on-networks formulation.
 
@@ -178,6 +181,8 @@ The current project uses:
 - `numpy`
 - `matplotlib`
 - `jupyter`
+- `pytest`
+- `pillow`
 
 ## Reference
 
