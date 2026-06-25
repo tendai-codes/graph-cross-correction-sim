@@ -1,0 +1,15 @@
+# Part 6 — Spectral Analysis and Stability Notes
+
+Part 6 analyses the diffusion operator directly through the eigenvalues and eigenvectors of the graph Laplacian. This moves the project beyond visual simulation and asks whether the numerical method itself is stable, interpretable, and mathematically consistent.
+
+The graph Laplacian is defined as `L = D - A`, where `A` records which nuclei are connected and `D` records how many neighbours each nucleus has. This operator is appropriate for diffusion because `L @ u` compares each nucleus to its neighbours, allowing signal to move from high-concentration regions to low-concentration regions.
+
+The eigenvalues of `L` describe how different spatial signal patterns decay. The smallest eigenvalue is zero for each connected component, while the largest eigenvalue controls the fastest-changing mode and therefore constrains the maximum safe timestep for explicit Euler integration.
+
+The Euler stability condition used in the notebook is `dt < 2 / (alpha * lambda_max)`. If `dt` or `alpha` is too large, high-frequency modes are amplified instead of damped. The result is not a biological phenomenon, but a numerical artefact caused by stepping too far forward in time.
+
+The steady-state equation is `(alpha * L + beta * I) u_ss = q`. This gives the long-term signal profile directly, without having to simulate every intermediate timestep. Because `beta > 0`, the matrix is invertible and every mode has positive damping.
+
+The Fiedler vector, which is the eigenvector associated with the second-smallest eigenvalue, provides a soft partition of the graph. Nuclei with the same sign tend to be better connected to one another. In biological terms, corrected nuclei placed within the same well-connected region should support stronger local rescue than corrected nuclei scattered across weak graph bottlenecks.
+
+The Fiedler placement experiment converts this interpretation into a direct model comparison. It asks whether clustered placement within one Fiedler partition rescues at least as many nuclei as a split placement across the partition boundary.
