@@ -1,0 +1,2 @@
+clustered_better_fraction,corrected_nuclei_used,equal_fraction,hypothesis,mean_clustered_rescue,mean_difference_clustered_minus_split,mean_split_rescue,n_graphs,n_nuclei,split_better_fraction,strategy
+0.95,10,0.02,fiedler_placement_validation,0.16500000000000006,0.08350000000000003,0.0815,100,60,0.03,fiedler_clustered_vs_split

@@ -1,0 +1,6 @@
+corrected_fraction_actual,corrected_fraction_requested,hypothesis,max_signal,mean_signal,n_nuclei,rescued_fraction,strategy
+0.05,0.05,transduction_efficiency,0.1811260824985745,0.08333333333333316,60,0.0,evenly_spaced
+0.1,0.1,transduction_efficiency,0.253068841360136,0.16666666666666632,60,0.0,evenly_spaced
+0.2,0.2,transduction_efficiency,0.41848802893156367,0.3333333333333327,60,0.0,evenly_spaced
+0.4,0.4,transduction_efficiency,0.7400894424408578,0.6666666666666653,60,1.0,evenly_spaced
+0.6,0.6,transduction_efficiency,1.0630757830967839,0.9999999999999982,60,1.0,evenly_spaced

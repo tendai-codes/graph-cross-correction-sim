@@ -1,0 +1,5 @@
+algebraic_connectivity,components_estimate,corrected_fraction_actual,corrected_fraction_requested,hypothesis,lambda_max,max_signal,mean_signal,n_nuclei,rescued_fraction,strategy
+0.1296868956295772,1.0,0.15,0.15,clustered_vs_distributed_correction,13.040685599213694,0.8099094194095263,0.24999999999999956,60,0.2,left_cluster
+0.1296868956295772,1.0,0.15,0.15,clustered_vs_distributed_correction,13.040685599213694,0.48299434050261253,0.24999999999999964,60,0.0,central_cluster
+0.1296868956295772,1.0,0.15,0.15,clustered_vs_distributed_correction,13.040685599213694,0.3300171311705425,0.24999999999999958,60,0.0,evenly_spaced
+0.1296868956295772,1.0,0.15,0.15,clustered_vs_distributed_correction,13.040685599213694,0.36220410637557837,0.2499999999999995,60,0.0,random

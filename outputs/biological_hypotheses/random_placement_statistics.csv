@@ -1,0 +1,2 @@
+ci95_high,ci95_low,corrected_fraction_requested,hypothesis,mean_rescued_fraction,mean_signal_across_trials,n_nuclei,n_trials,std_rescued_fraction,strategy
+0.004401666666666666,0.0008,0.15,random_placement_statistics,0.002333333333333333,0.24999999999999953,60,250,0.014408615846786215,random
